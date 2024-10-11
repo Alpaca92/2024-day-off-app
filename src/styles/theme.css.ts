@@ -1,12 +1,12 @@
 import { createGlobalTheme, createTheme, createThemeContract } from '@vanilla-extract/css';
 
 const base = createGlobalTheme(':root', {
-  space: {
+  spaces: {
     small: '8px',
     medium: '16px',
     large: '24px',
   },
-  fontSize: {
+  fontSizes: {
     small: '14px',
     medium: '16px',
     large: '20px',
