@@ -25,7 +25,10 @@
     "paths": {
       "@asset/*": ["src/assets/*"],
       "@components/*": ["src/components/*"],
+      "@hooks/*": ["src/hooks/*"],
+      "@layouts/*": ["src/layouts/*"],
       "@pages/*": ["src/pages/*"],
+      "@providers/*": ["src/providers/*"],
       "@routes/*": ["src/routes/*"],
       "@styles/*": ["src/styles/*"]
     }
