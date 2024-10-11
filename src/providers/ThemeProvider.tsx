@@ -1,10 +1,14 @@
 import { createContext, PropsWithChildren, useMemo, useState } from 'react';
 
 interface ThemeContextProps {
+  isDarkMode: boolean;
   toggleTheme: () => void;
 }
 
-export const ThemeContext = createContext<ThemeContextProps | null>(null);
+export const ThemeContext = createContext<ThemeContextProps>({
+  isDarkMode: false,
+  toggleTheme: () => {},
+});
 
 const ThemeProvider = ({ children }: PropsWithChildren) => {
   const [isDarkMode, setIsDarkMode] = useState(false);

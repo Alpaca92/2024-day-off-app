@@ -13,7 +13,7 @@ export const card = style({
 export const title = style({
   fontSize: vars.fontSize.large,
   fontWeight: 'bold',
-  color: vars.color.text,
+  color: vars.colors.text,
   marginBottom: vars.space.medium,
 });
 
@@ -23,17 +23,17 @@ export const table = style({
 });
 
 export const tableHeader = style({
-  backgroundColor: vars.color.background,
-  color: vars.color.text,
+  backgroundColor: vars.colors.background,
+  color: vars.colors.text,
   fontWeight: 'bold',
   textAlign: 'left',
   padding: vars.space.medium,
-  borderBottom: `1px solid ${vars.color.border}`,
+  borderBottom: `1px solid ${vars.colors.border}`,
 });
 
 export const tableCell = style({
   padding: vars.space.medium,
-  borderBottom: `1px solid ${vars.color.border}`,
+  borderBottom: `1px solid ${vars.colors.border}`,
 });
 
 export const statusCell = style({
@@ -41,11 +41,11 @@ export const statusCell = style({
 });
 
 export const approvedStatus = style({
-  color: vars.color.secondary,
+  color: vars.colors.secondary,
 });
 
 export const pendingStatus = style({
-  color: vars.color.primary,
+  color: vars.colors.primary,
 });
 
 export const rejectedStatus = style({
