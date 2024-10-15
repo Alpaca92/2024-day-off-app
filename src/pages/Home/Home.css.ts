@@ -5,16 +5,16 @@ export const card = style({
   backgroundColor: 'white',
   borderRadius: vars.borderRadius,
   boxShadow: '0 1px 2px rgba(0, 0, 0, 0.1)',
-  padding: vars.space.large,
+  padding: vars.spaces.large,
   maxWidth: '1000px',
   margin: '0 auto',
 });
 
 export const title = style({
-  fontSize: vars.fontSize.large,
+  fontSize: vars.fontSizes.large,
   fontWeight: 'bold',
   color: vars.colors.text,
-  marginBottom: vars.space.medium,
+  marginBottom: vars.spaces.medium,
 });
 
 export const table = style({
@@ -27,12 +27,12 @@ export const tableHeader = style({
   color: vars.colors.text,
   fontWeight: 'bold',
   textAlign: 'left',
-  padding: vars.space.medium,
+  padding: vars.spaces.medium,
   borderBottom: `1px solid ${vars.colors.border}`,
 });
 
 export const tableCell = style({
-  padding: vars.space.medium,
+  padding: vars.spaces.medium,
   borderBottom: `1px solid ${vars.colors.border}`,
 });
 

@@ -1,5 +1,4 @@
 import { useForm } from 'react-hook-form';
-import * as theme from '@styles/theme.css';
 import * as styles from './Login.css';
 
 interface LoginForm {
@@ -15,7 +14,7 @@ const Login = () => {
   };
 
   return (
-    <div className={`${theme.themeClass} ${styles.container}`}>
+    <div className={styles.container}>
       <form onSubmit={handleSubmit(handleLogin)} className={styles.form}>
         <h1 className={styles.title}>로그인</h1>
         <div className={styles.inputGroup}>

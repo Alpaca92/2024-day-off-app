@@ -1,4 +1,3 @@
-import * as theme from '@styles/theme.css';
 import * as styles from './Home.css';
 
 type VacationStatus = {
@@ -30,7 +29,7 @@ const Home = () => {
   };
 
   return (
-    <div className={theme.themeClass}>
+    <div>
       <div className={styles.card}>
         <h1 className={styles.title}>휴가 현황 대시보드</h1>
         <table className={styles.table}>
