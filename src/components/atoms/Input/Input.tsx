@@ -14,7 +14,7 @@ const Input = ({ label, id, name, options, ...rest }: InputProps) => {
 
   return (
     <label htmlFor={id ?? inputId} className={styles.container}>
-      {label ?? <p className={styles.label}>{label}</p>}
+      {label && <p className={styles.label}>{label}</p>}
       <input {...rest} className={styles.input} id={id ?? inputId} {...register(name, options)} />
     </label>
   );
