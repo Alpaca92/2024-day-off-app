@@ -1,5 +1,6 @@
 import { useForm } from 'react-hook-form';
 import * as styles from './Login.css';
+import { useNavigate } from 'react-router';
 
 interface LoginForm {
   email: string;
@@ -8,14 +9,19 @@ interface LoginForm {
 
 const Login = () => {
   const { register, handleSubmit } = useForm<LoginForm>();
+  const navigate = useNavigate();
 
-  const handleLogin = (data: LoginForm) => {
+  const onLogin = (data: LoginForm) => {
     console.log(data);
+  };
+
+  const onGoToSignup = () => {
+    navigate('/signup');
   };
 
   return (
     <div className={styles.container}>
-      <form onSubmit={handleSubmit(handleLogin)} className={styles.form}>
+      <form onSubmit={handleSubmit(onLogin)}>
         <h1 className={styles.title}>로그인</h1>
         <div className={styles.inputGroup}>
           <label htmlFor="email" className={styles.label}>
@@ -33,6 +39,9 @@ const Login = () => {
           로그인
         </button>
       </form>
+      <p onClick={onGoToSignup} className={styles.goToRegister}>
+        회원가입 &rarr;
+      </p>
     </div>
   );
 };

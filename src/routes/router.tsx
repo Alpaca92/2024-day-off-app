@@ -1,4 +1,4 @@
-import CommmonLayout from '@layouts/CommonLayout';
+import CommmonLayout from '@layouts/CommonLayout/CommonLayout';
 import { lazy } from 'react';
 import { RouteObject } from 'react-router';
 

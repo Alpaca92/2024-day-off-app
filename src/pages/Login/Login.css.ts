@@ -2,14 +2,6 @@ import { vars } from '@styles/theme.css';
 import { style } from '@vanilla-extract/css';
 
 export const container = style({
-  display: 'flex',
-  justifyContent: 'center',
-  alignItems: 'center',
-  height: '100vh',
-  backgroundColor: vars.colors.background,
-});
-
-export const form = style({
   backgroundColor: vars.colors.inputBackground,
   padding: vars.spaces.large,
   borderRadius: vars.borderRadius,
@@ -34,6 +26,7 @@ export const label = style({
   display: 'block',
   marginBottom: vars.spaces.small,
   color: vars.colors.text,
+  cursor: 'pointer',
 });
 
 export const input = style({
@@ -58,5 +51,16 @@ export const button = style({
   transition: 'background-color 0.3s',
   ':hover': {
     backgroundColor: '#166fe5',
+  },
+});
+
+export const goToRegister = style({
+  color: vars.colors.text,
+  textAlign: 'end',
+  cursor: 'pointer',
+  marginTop: vars.spaces.medium,
+  transition: 'color 0.3s',
+  ':hover': {
+    color: vars.colors.primary,
   },
 });
