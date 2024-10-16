@@ -1,14 +1,14 @@
 import { ComponentPropsWithoutRef, useId } from 'react';
-import { RegisterOptions, useFormContext } from 'react-hook-form';
+import { FieldValues, Path, RegisterOptions, useFormContext } from 'react-hook-form';
 import * as styles from './Input.css';
 
-interface InputProps extends ComponentPropsWithoutRef<'input'> {
+interface InputProps<T extends FieldValues> extends ComponentPropsWithoutRef<'input'> {
   label?: string;
-  name: string;
+  name: Path<T>;
   options?: RegisterOptions;
 }
 
-const Input = ({ label, id, name, options, ...rest }: InputProps) => {
+const Input = <T extends FieldValues>({ label, id, name, options, ...rest }: InputProps<T>) => {
   const inputId = useId();
   const { register } = useFormContext();
 

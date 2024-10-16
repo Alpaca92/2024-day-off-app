@@ -6,7 +6,12 @@ export const container = style({
   cursor: 'pointer',
 });
 
-export const label = style({});
+export const label = style({
+  marginBottom: vars.spaces.small,
+  fontSize: '16px',
+  color: vars.colors.text,
+  display: 'block',
+});
 
 export const input = style({
   width: '100%',
