@@ -1,6 +1,7 @@
-import { useForm } from 'react-hook-form';
+import { FormProvider, useForm } from 'react-hook-form';
 import * as styles from './Login.css';
 import { useNavigate } from 'react-router';
+import { Input } from '@components/index';
 
 interface LoginForm {
   email: string;
@@ -8,7 +9,8 @@ interface LoginForm {
 }
 
 const Login = () => {
-  const { register, handleSubmit } = useForm<LoginForm>();
+  const formInstance = useForm<LoginForm>();
+  const { handleSubmit } = formInstance;
   const navigate = useNavigate();
 
   const onLogin = (data: LoginForm) => {
@@ -21,24 +23,16 @@ const Login = () => {
 
   return (
     <div className={styles.container}>
-      <form onSubmit={handleSubmit(onLogin)}>
-        <h1 className={styles.title}>로그인</h1>
-        <div className={styles.inputGroup}>
-          <label htmlFor="email" className={styles.label}>
-            이메일
-          </label>
-          <input type="email" id="email" className={styles.input} {...register('email', { required: true })} />
-        </div>
-        <div className={styles.inputGroup}>
-          <label htmlFor="password" className={styles.label}>
-            비밀번호
-          </label>
-          <input type="password" id="password" className={styles.input} {...register('password', { required: true })} />
-        </div>
-        <button type="submit" className={styles.button}>
-          로그인
-        </button>
-      </form>
+      <FormProvider {...formInstance}>
+        <form onSubmit={handleSubmit(onLogin)} className={styles.formBox}>
+          <h1 className={styles.title}>로그인</h1>
+          <Input<LoginForm> label="이메일" name="email" />
+          <Input<LoginForm> label="비밀번호" name="password" />
+          <button type="submit" className={styles.button}>
+            로그인
+          </button>
+        </form>
+      </FormProvider>
       <p onClick={onGoToSignup} className={styles.goToRegister}>
         회원가입 &rarr;
       </p>

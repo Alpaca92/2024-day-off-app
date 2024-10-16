@@ -10,31 +10,18 @@ export const container = style({
   maxWidth: '400px',
 });
 
+export const formBox = style({
+  display: 'flex',
+  flexDirection: 'column',
+  gap: vars.spaces.medium,
+});
+
 export const title = style({
   fontSize: '24px',
   fontWeight: 'bold',
   marginBottom: vars.spaces.medium,
   color: vars.colors.text,
   textAlign: 'center',
-});
-
-export const inputGroup = style({
-  marginBottom: vars.spaces.medium,
-});
-
-export const label = style({
-  display: 'block',
-  marginBottom: vars.spaces.small,
-  color: vars.colors.text,
-  cursor: 'pointer',
-});
-
-export const input = style({
-  width: '100%',
-  padding: vars.spaces.small,
-  borderRadius: vars.borderRadius,
-  border: `1px solid ${vars.colors.inputBorder}`,
-  fontSize: '16px',
 });
 
 export const button = style({
