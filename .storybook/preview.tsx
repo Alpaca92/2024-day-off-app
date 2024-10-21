@@ -1,6 +1,5 @@
 import React from 'react';
 import type { Preview } from '@storybook/react';
-import ThemeProvider from '@providers/ThemeProvider';
 import { darkTheme, lightTheme } from '@styles/theme.css';
 
 const preview: Preview = {
@@ -11,7 +10,7 @@ const preview: Preview = {
       defaultValue: false,
       toolbar: {
         title: 'theme',
-        icon: 'wrench',
+        icon: 'sync', // NOTE https://storybook.js.org/docs/faq#what-icons-are-available-for-my-toolbar-or-my-addon
         items: [
           { title: 'dark', value: true, right: 'dark mode' },
           { title: 'light', value: false, right: 'light mode' },
@@ -34,11 +33,9 @@ export const decorators = [
     const { theme } = context.globals;
 
     return (
-      <ThemeProvider>
-        <div className={`${theme ? darkTheme : lightTheme}`}>
-          <Story />
-        </div>
-      </ThemeProvider>
+      <div className={`${theme ? darkTheme : lightTheme}`}>
+        <Story />
+      </div>
     );
   },
 ];
