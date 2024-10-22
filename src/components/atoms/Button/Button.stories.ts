@@ -21,7 +21,7 @@ const meta = {
       type: 'string',
       control: {
         type: 'radio',
-        labels: { primary: 'primary', secondary: 'secondary' },
+        labels: { primary: 'primary', secondary: 'secondary', danger: 'danger' },
       },
       description: '버튼의 색상을 결정',
       table: {
@@ -58,5 +58,12 @@ export const Secondary: Story = {
   args: {
     variant: 'secondary',
     children: 'Secondary',
+  },
+};
+
+export const Danger: Story = {
+  args: {
+    variant: 'danger',
+    children: 'Danger',
   },
 };
