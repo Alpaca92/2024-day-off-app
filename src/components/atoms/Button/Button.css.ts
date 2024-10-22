@@ -7,6 +7,7 @@ const base = style({
   borderRadius: '4px',
   cursor: 'pointer',
   border: 'none',
+  textAlign: 'center',
 });
 
 const variants = {
@@ -14,14 +15,23 @@ const variants = {
     primary: {
       backgroundColor: vars.colors.button.primary.background,
       color: vars.colors.button.primary.text,
+      ':hover': {
+        backgroundColor: vars.colors.button.primary.hover,
+      },
     },
     secondary: {
       backgroundColor: vars.colors.button.secondary.background,
       color: vars.colors.button.secondary.text,
+      ':hover': {
+        backgroundColor: vars.colors.button.secondary.hover,
+      },
     },
     danger: {
-      backgroundColor: vars.colors.error.main,
+      backgroundColor: vars.colors.error.light,
       color: vars.colors.primary.contrastText,
+      ':hover': {
+        backgroundColor: vars.colors.error.main,
+      },
     },
   },
   size: {
