@@ -8,15 +8,15 @@ export const container = style({
 
 export const label = style({
   marginBottom: vars.spaces.small,
-  fontSize: '16px',
-  color: vars.colors.text,
+  fontSize: vars.fontSizes.medium,
+  color: vars.colors.text.primary,
   display: 'block',
 });
 
 export const input = style({
   width: '100%',
   padding: vars.spaces.small,
-  borderRadius: vars.borderRadius,
-  border: `1px solid ${vars.colors.inputBorder}`,
-  fontSize: '16px',
+  borderRadius: vars.borderRadius.default,
+  border: `1px solid ${vars.colors.border.default}`,
+  fontSize: vars.fontSizes.medium,
 });
