@@ -1,4 +1,4 @@
-import type { Meta, StoryFn } from '@storybook/react';
+import type { Meta, StoryObj } from '@storybook/react';
 import { Button } from '@components/index';
 
 const meta = {
@@ -14,20 +14,23 @@ const meta = {
       control: { type: 'text' },
       description: 'button 내에 들어갈 텍스트',
       table: {
-        defaultValue: { summary: '' },
+        type: { summary: 'ReactNode' },
       },
     },
     variant: {
+      type: 'string',
       control: {
         type: 'radio',
-        labels: { primary: 'Primary', secondary: 'Secondary' },
+        labels: { primary: 'primary', secondary: 'secondary' },
       },
       description: '버튼의 색상을 결정',
       table: {
         defaultValue: { summary: 'primary' },
+        type: { summary: 'string' },
       },
     },
     size: {
+      type: 'string',
       control: {
         type: 'radio',
         labels: { small: 'small', medium: 'medium', large: 'large' },
@@ -35,17 +38,25 @@ const meta = {
       description: '버튼의 크기를 결정',
       table: {
         defaultValue: { summary: 'medium' },
+        type: { summary: 'string' },
       },
     },
   },
 } satisfies Meta<typeof Button>;
 
 export default meta;
+type Story = StoryObj<typeof meta>;
 
-export const Primary: StoryFn = () => {
-  return <Button variant="primary">Primary</Button>;
+export const Primary: Story = {
+  args: {
+    variant: 'primary',
+    children: 'Primary',
+  },
 };
 
-export const Secondary: StoryFn = () => {
-  return <Button variant="secondary">Secondary</Button>;
+export const Secondary: Story = {
+  args: {
+    variant: 'secondary',
+    children: 'Secondary',
+  },
 };
