@@ -50,7 +50,7 @@ export const button = recipe({
   },
 });
 
-export interface ButtonVariantProps {
+export interface ButtonRecipeProps {
   variant?: keyof typeof variants.variant;
   size?: keyof typeof variants.size;
 }
