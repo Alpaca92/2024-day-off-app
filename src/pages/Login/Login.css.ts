@@ -17,7 +17,7 @@ export const formBox = style({
 });
 
 export const title = style({
-  fontSize: '24px',
+  fontSize: vars.fontSizes.large,
   fontWeight: 'bold',
   marginBottom: vars.spaces.medium,
   color: vars.colors.text.primary,
@@ -32,22 +32,5 @@ export const goToRegister = style({
   transition: 'color 0.3s',
   ':hover': {
     color: vars.colors.text.secondary,
-  },
-});
-
-export const button = style({
-  width: '100%',
-  padding: vars.spaces.small,
-  backgroundColor: vars.colors.primary,
-  color: vars.colors.buttonText,
-  border: 'none',
-  borderRadius: vars.borderRadius,
-  fontSize: '16px',
-  fontWeight: 'bold',
-  cursor: 'pointer',
-  textAlign: 'center',
-  transition: 'background-color 0.3s',
-  ':hover': {
-    backgroundColor: '#166fe5',
   },
 });

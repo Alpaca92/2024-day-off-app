@@ -28,7 +28,7 @@ const Login = () => {
           <h1 className={styles.title}>로그인</h1>
           <Input<LoginForm> label="이메일" name="email" />
           <Input<LoginForm> label="비밀번호" name="password" />
-          <Button type="submit" variant="danger">
+          <Button type="submit" variant="primary">
             로그인
           </Button>
         </form>
