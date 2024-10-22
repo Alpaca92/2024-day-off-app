@@ -10,7 +10,37 @@ const meta = {
   },
   tags: ['autodocs'],
   args: {},
-  argTypes: {},
+  argTypes: {
+    size: {
+      control: {
+        type: 'radio',
+        labels: { small: 'small', medium: 'medium', large: 'large', full: 'full' },
+      },
+      description: '아이콘의 크기를 결정',
+      table: {
+        defaultValue: { summary: 'medium' },
+        type: { summary: 'string' },
+      },
+    },
+    src: {
+      control: {
+        type: 'file',
+      },
+      description: '아이콘 이미지의 경로',
+      table: {
+        type: { summary: 'string' },
+      },
+    },
+    alt: {
+      control: {
+        type: 'text',
+      },
+      description: '아이콘의 대체 텍스트',
+      table: {
+        type: { summary: 'string' },
+      },
+    },
+  },
 } satisfies Meta<typeof Icon>;
 
 export default meta;
