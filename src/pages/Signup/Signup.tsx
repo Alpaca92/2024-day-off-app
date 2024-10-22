@@ -1,17 +1,20 @@
-import { useForm } from 'react-hook-form';
+import { FormProvider, useForm } from 'react-hook-form';
 import * as styles from './Signup.css';
 import { useNavigate } from 'react-router';
+import { Input } from '@components/index';
 
-interface LoginForm {
+interface SignupForm {
   email: string;
   password: string;
+  confirmPassword: string;
 }
 
 const Signup = () => {
-  const { register, handleSubmit } = useForm<LoginForm>();
+  const formInstance = useForm<SignupForm>();
+  const { handleSubmit } = formInstance;
   const navigate = useNavigate();
 
-  const onLogin = (data: LoginForm) => {
+  const onSignup = (data: SignupForm) => {
     console.log(data);
   };
 
@@ -21,24 +24,17 @@ const Signup = () => {
 
   return (
     <div className={styles.container}>
-      <form onSubmit={handleSubmit(onLogin)}>
-        <h1 className={styles.title}>회원가입</h1>
-        <div className={styles.inputGroup}>
-          <label htmlFor="email" className={styles.label}>
-            이메일
-          </label>
-          <input type="email" id="email" className={styles.input} {...register('email', { required: true })} />
-        </div>
-        <div className={styles.inputGroup}>
-          <label htmlFor="password" className={styles.label}>
-            비밀번호
-          </label>
-          <input type="password" id="password" className={styles.input} {...register('password', { required: true })} />
-        </div>
-        <button type="submit" className={styles.button}>
-          회원가입
-        </button>
-      </form>
+      <FormProvider {...formInstance}>
+        <form onSubmit={handleSubmit(onSignup)} className={styles.formBox}>
+          <h1 className={styles.title}>회원가입</h1>
+          <Input<SignupForm> label="이메일" name="email" />
+          <Input<SignupForm> label="비밀번호" name="password" />
+          <Input<SignupForm> label="비밀번호확인" name="confirmPassword" />
+          <button type="submit" className={styles.button}>
+            회원가입
+          </button>
+        </form>
+      </FormProvider>
       <p onClick={onGoToLogin} className={styles.goToLogin}>
         &larr; 로그인
       </p>

@@ -2,46 +2,44 @@ import { vars } from '@styles/theme.css';
 import { style } from '@vanilla-extract/css';
 
 export const container = style({
-  backgroundColor: vars.colors.inputBackground,
+  backgroundColor: vars.colors.background.paper,
   padding: vars.spaces.large,
-  borderRadius: vars.borderRadius,
+  borderRadius: vars.borderRadius.default,
   boxShadow: '0 2px 4px rgba(0, 0, 0, 0.1), 0 8px 16px rgba(0, 0, 0, 0.1)',
   width: '100%',
   maxWidth: '400px',
 });
 
+export const formBox = style({
+  display: 'flex',
+  flexDirection: 'column',
+  gap: vars.spaces.medium,
+});
+
 export const title = style({
-  fontSize: '24px',
+  fontSize: vars.fontSizes.large,
   fontWeight: 'bold',
   marginBottom: vars.spaces.medium,
-  color: vars.colors.text,
+  color: vars.colors.text.primary,
   textAlign: 'center',
 });
 
-export const inputGroup = style({
-  marginBottom: vars.spaces.medium,
-});
-
-export const label = style({
-  display: 'block',
-  marginBottom: vars.spaces.small,
-  color: vars.colors.text,
+export const goToLogin = style({
+  color: vars.colors.text.primary,
+  textAlign: 'start',
   cursor: 'pointer',
-});
-
-export const input = style({
-  width: '100%',
-  padding: vars.spaces.small,
-  borderRadius: vars.borderRadius,
-  border: `1px solid ${vars.colors.inputBorder}`,
-  fontSize: '16px',
+  marginTop: vars.spaces.medium,
+  transition: 'color 0.3s',
+  ':hover': {
+    color: vars.colors.text.secondary,
+  },
 });
 
 export const button = style({
   width: '100%',
   padding: vars.spaces.small,
-  backgroundColor: vars.colors.primary,
-  color: vars.colors.buttonText,
+  backgroundColor: vars.colors.primary.main,
+  color: vars.colors.primary.contrastText,
   border: 'none',
   borderRadius: vars.borderRadius,
   fontSize: '16px',
@@ -51,16 +49,5 @@ export const button = style({
   transition: 'background-color 0.3s',
   ':hover': {
     backgroundColor: '#166fe5',
-  },
-});
-
-export const goToLogin = style({
-  color: vars.colors.text,
-  textAlign: 'start',
-  cursor: 'pointer',
-  marginTop: vars.spaces.medium,
-  transition: 'color 0.3s',
-  ':hover': {
-    color: vars.colors.primary,
   },
 });
