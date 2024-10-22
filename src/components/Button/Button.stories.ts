@@ -6,7 +6,7 @@ type variantKeys = NonNullable<ButtonRecipeProps['variant']>;
 type sizeKeys = NonNullable<ButtonRecipeProps['size']>;
 
 const meta = {
-  title: 'Atoms/Button',
+  title: 'Button',
   component: Button,
   parameters: {
     layout: 'centered',

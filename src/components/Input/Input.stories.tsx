@@ -4,7 +4,7 @@ import Input from '@components/Input/Input';
 import { FormProvider, useForm } from 'react-hook-form';
 
 const meta = {
-  title: 'Form/Input',
+  title: 'Input',
   component: Input,
   parameters: {
     layout: 'centered',

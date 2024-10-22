@@ -6,7 +6,7 @@ import type { IconRecipeProps } from './Icon.css';
 type SizeKeys = NonNullable<IconRecipeProps['size']>;
 
 const meta = {
-  title: 'Atoms/Icon',
+  title: 'Icon',
   component: Icon,
   parameters: {
     layout: 'centered',
