@@ -8,27 +8,20 @@ const items: NavigationBarProps['items'] = [
   {
     src: Icons.Home,
     alt: 'Home',
-    title: 'Home',
+    title: 'request',
+    path: 'request',
   },
   {
     src: Icons.Home,
     alt: 'Home',
     title: 'Home',
+    path: '/',
   },
   {
     src: Icons.Home,
     alt: 'Home',
-    title: 'Home',
-  },
-  {
-    src: Icons.Home,
-    alt: 'Home',
-    title: 'Home',
-  },
-  {
-    src: Icons.Home,
-    alt: 'Home',
-    title: 'Home',
+    title: 'profile',
+    path: 'profile',
   },
 ];
 
