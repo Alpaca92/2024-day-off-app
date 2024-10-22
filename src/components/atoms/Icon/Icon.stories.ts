@@ -1,6 +1,9 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import { Icon } from '@components/index';
 import { Icons } from '@asset/index';
+import type { IconRecipeProps } from './Icon.css';
+
+type SizeKeys = NonNullable<IconRecipeProps['size']>;
 
 const meta = {
   title: 'Atoms/Icon',
@@ -14,8 +17,8 @@ const meta = {
     size: {
       control: {
         type: 'radio',
-        labels: { small: 'small', medium: 'medium', large: 'large', full: 'full' },
       },
+      options: ['small', 'medium', 'large', 'full'] as SizeKeys[],
       description: '아이콘의 크기를 결정',
       table: {
         defaultValue: { summary: 'medium' },
@@ -50,5 +53,6 @@ export const Default: Story = {
   args: {
     src: Icons.Home,
     alt: 'Home icon',
+    size: 'medium',
   },
 };
