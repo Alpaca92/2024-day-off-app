@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import { fn } from '@storybook/test';
-import Input from '@components/atoms/Input/Input';
+import Input from '@components/Input/Input';
 import { FormProvider, useForm } from 'react-hook-form';
 
 const meta = {

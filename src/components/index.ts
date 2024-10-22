@@ -1,6 +1,6 @@
-import Input from './atoms/Input/Input';
-import Button from './atoms/Button/Button';
-import Icon from './atoms/Icon/Icon';
+import Input from './Input/Input';
+import Button from './Button/Button';
+import Icon from './Icon/Icon';
 
 export {
   // NOTE atoms
