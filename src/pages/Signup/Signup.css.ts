@@ -34,20 +34,3 @@ export const goToLogin = style({
     color: vars.colors.text.secondary,
   },
 });
-
-export const button = style({
-  width: '100%',
-  padding: vars.spaces.small,
-  backgroundColor: vars.colors.primary.main,
-  color: vars.colors.primary.contrastText,
-  border: 'none',
-  borderRadius: vars.borderRadius,
-  fontSize: '16px',
-  fontWeight: 'bold',
-  cursor: 'pointer',
-  textAlign: 'center',
-  transition: 'background-color 0.3s',
-  ':hover': {
-    backgroundColor: '#166fe5',
-  },
-});
