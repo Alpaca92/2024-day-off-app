@@ -1,4 +1,4 @@
-import type { Meta, StoryFn } from '@storybook/react';
+import type { Meta, StoryObj } from '@storybook/react';
 import { fn } from '@storybook/test';
 import Input from '@components/atoms/Input/Input';
 import { FormProvider, useForm } from 'react-hook-form';
@@ -25,11 +25,17 @@ const meta = {
 } satisfies Meta<typeof Input>;
 
 export default meta;
+type Story = StoryObj<typeof meta>;
 
-export const Plain: StoryFn = () => {
-  return <Input name="test" />;
+export const Plain: Story = {
+  args: {
+    name: 'test',
+  },
 };
 
-export const WithLabel: StoryFn = () => {
-  return <Input label="테스트 라벨" name="test" />;
+export const WithLabel: Story = {
+  args: {
+    label: 'test label',
+    name: 'test with label',
+  },
 };
