@@ -1,5 +1,9 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import { Button } from '@components/index';
+import type { ButtonRecipeProps } from './Button.css';
+
+type variantKeys = NonNullable<ButtonRecipeProps['variant']>;
+type sizeKeys = NonNullable<ButtonRecipeProps['size']>;
 
 const meta = {
   title: 'Atoms/Button',
@@ -21,8 +25,8 @@ const meta = {
       type: 'string',
       control: {
         type: 'radio',
-        labels: { primary: 'primary', secondary: 'secondary', danger: 'danger' },
       },
+      options: ['primary', 'secondary', 'danger'] as variantKeys[],
       description: '버튼의 색상을 결정',
       table: {
         defaultValue: { summary: 'primary' },
@@ -33,8 +37,8 @@ const meta = {
       type: 'string',
       control: {
         type: 'radio',
-        labels: { small: 'small', medium: 'medium', large: 'large' },
       },
+      options: ['small', 'medium', 'large'] as sizeKeys[],
       description: '버튼의 크기를 결정',
       table: {
         defaultValue: { summary: 'medium' },
@@ -51,6 +55,7 @@ export const Primary: Story = {
   args: {
     variant: 'primary',
     children: 'Primary',
+    size: 'medium',
   },
 };
 
@@ -58,6 +63,7 @@ export const Secondary: Story = {
   args: {
     variant: 'secondary',
     children: 'Secondary',
+    size: 'medium',
   },
 };
 
@@ -65,5 +71,6 @@ export const Danger: Story = {
   args: {
     variant: 'danger',
     children: 'Danger',
+    size: 'medium',
   },
 };
