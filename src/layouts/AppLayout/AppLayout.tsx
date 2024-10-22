@@ -6,20 +6,20 @@ import { NavigationBarProps } from '@components/NavigationBar/NavigationBar';
 
 const items: NavigationBarProps['items'] = [
   {
-    src: Icons.Home,
-    alt: 'Home',
+    src: Icons.Request,
+    alt: 'request icon',
     title: 'request',
     path: 'request',
   },
   {
     src: Icons.Home,
-    alt: 'Home',
+    alt: 'Home icon',
     title: 'Home',
     path: '/',
   },
   {
-    src: Icons.Home,
-    alt: 'Home',
+    src: Icons.Profile,
+    alt: 'profile icon',
     title: 'profile',
     path: 'profile',
   },
