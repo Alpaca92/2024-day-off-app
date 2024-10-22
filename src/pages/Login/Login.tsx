@@ -1,7 +1,7 @@
 import { FormProvider, useForm } from 'react-hook-form';
 import * as styles from './Login.css';
 import { useNavigate } from 'react-router';
-import { Input } from '@components/index';
+import { Button, Input } from '@components/index';
 
 interface LoginForm {
   email: string;
@@ -28,9 +28,9 @@ const Login = () => {
           <h1 className={styles.title}>로그인</h1>
           <Input<LoginForm> label="이메일" name="email" />
           <Input<LoginForm> label="비밀번호" name="password" />
-          <button type="submit" className={styles.button}>
+          <Button type="submit" variant="danger">
             로그인
-          </button>
+          </Button>
         </form>
       </FormProvider>
       <p onClick={onGoToSignup} className={styles.goToRegister}>

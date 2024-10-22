@@ -1,11 +1,10 @@
 import { ComponentPropsWithoutRef } from 'react';
-import { button } from './Button.css';
+import { button, ButtonVariantProps } from './Button.css';
 
-interface ButtonProps extends ComponentPropsWithoutRef<'button'> {
-  variant: string;
-}
+// eslint-disable-next-line @typescript-eslint/no-empty-object-type
+interface ButtonProps extends ComponentPropsWithoutRef<'button'> {}
 
-const Button = ({ children }: ButtonProps) => {
+const Button = ({ children }: ButtonProps & ButtonVariantProps) => {
   return <button className={button()}>{children}</button>;
 };
 
