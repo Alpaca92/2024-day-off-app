@@ -1,5 +1,5 @@
 import { Outlet } from 'react-router';
-import { NavigationBar } from '@components/index';
+import { Header, NavigationBar } from '@components/index';
 import * as styles from './AppLayout.css';
 import { Icons } from '@asset/index';
 import { NavigationBarProps } from '@components/NavigationBar/NavigationBar';
@@ -28,6 +28,7 @@ const items: NavigationBarProps['items'] = [
 const AppLayout = () => {
   return (
     <main className={styles.container}>
+      <Header />
       <Outlet />
       <NavigationBar items={items} />
     </main>
