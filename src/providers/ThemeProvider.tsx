@@ -26,8 +26,6 @@ const ThemeProvider = ({ children }: PropsWithChildren) => {
     [isDarkMode],
   );
 
-  console.log(isDarkMode, value);
-
   return <ThemeContext.Provider value={value}>{children}</ThemeContext.Provider>;
 };
 
