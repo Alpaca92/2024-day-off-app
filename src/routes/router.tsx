@@ -3,9 +3,10 @@ import CommmonLayout from '@layouts/CommonLayout/CommonLayout';
 import { lazy, Suspense } from 'react';
 import { Outlet, RouteObject } from 'react-router';
 
-const Home = lazy(() => import('@pages/Home/Home'));
 const Login = lazy(() => import('@pages/Login/Login'));
 const Signup = lazy(() => import('@pages/Signup/Signup'));
+const Home = lazy(() => import('@pages/Home/Home'));
+const Profile = lazy(() => import('@pages/Profile/Profile'));
 
 const Router: RouteObject[] = [
   {
@@ -33,6 +34,10 @@ const Router: RouteObject[] = [
               {
                 path: '/',
                 element: <Home />,
+              },
+              {
+                path: '/profile',
+                element: <Profile />,
               },
             ],
           },
