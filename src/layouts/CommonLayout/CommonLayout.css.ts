@@ -6,5 +6,5 @@ export const container = style({
   justifyContent: 'center',
   alignItems: 'center',
   height: '100vh',
-  backgroundColor: vars.colors.background,
+  backgroundColor: vars.colors.background.default,
 });
