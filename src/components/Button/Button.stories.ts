@@ -3,7 +3,7 @@ import { Button } from '@components/index';
 import type { ButtonRecipeProps } from './Button.css';
 
 type variantKeys = NonNullable<ButtonRecipeProps['variant']>;
-type sizeKeys = NonNullable<ButtonRecipeProps['size']>;
+type sizeKeys = NonNullable<ButtonRecipeProps['fontSize']>;
 
 const meta = {
   title: 'Button',
@@ -33,7 +33,7 @@ const meta = {
         type: { summary: 'string' },
       },
     },
-    size: {
+    fontSize: {
       type: 'string',
       control: {
         type: 'radio',
@@ -55,7 +55,7 @@ export const Primary: Story = {
   args: {
     variant: 'primary',
     children: 'Primary',
-    size: 'medium',
+    fontSize: 'medium',
   },
 };
 
@@ -63,7 +63,7 @@ export const Secondary: Story = {
   args: {
     variant: 'secondary',
     children: 'Secondary',
-    size: 'medium',
+    fontSize: 'medium',
   },
 };
 
@@ -71,6 +71,6 @@ export const Danger: Story = {
   args: {
     variant: 'danger',
     children: 'Danger',
-    size: 'medium',
+    fontSize: 'medium',
   },
 };
