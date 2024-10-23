@@ -1,19 +1,22 @@
 import { createSprinkles, defineProperties } from '@vanilla-extract/sprinkles';
 import { vars } from './theme.css';
 
-const responsiveProperties = defineProperties({
-  conditions: {
-    mobile: {},
-    tablet: { '@media': 'screen and (min-width: 768px)' },
-    desktop: { '@media': 'screen and (min-width: 1024px)' },
-  },
-  defaultCondition: 'mobile',
+const flexProperties = defineProperties({
   properties: {
-    fontSize: vars.fontSizes,
+    display: ['flex', 'inline-flex'],
+    flexDirection: ['row', 'column', 'row-reverse', 'column-reverse'],
+    flexWrap: ['nowrap', 'wrap', 'wrap-reverse'],
+    justifyContent: ['flex-start', 'flex-end', 'center', 'space-between', 'space-around', 'space-evenly'],
+    alignItems: ['flex-start', 'flex-end', 'center', 'baseline', 'stretch'],
+    alignContent: ['flex-start', 'flex-end', 'center', 'space-between', 'space-around', 'stretch'],
+    gap: vars.spaces,
+    flexGrow: [0, 1],
+    flexShrink: [0, 1],
+    flexBasis: ['auto', '0'],
   },
   shorthands: {
-    text: ['fontSize'],
+    align: ['justifyContent', 'alignItems'],
   },
 });
 
-export const sprinkles = createSprinkles(responsiveProperties);
+export const sprinkles = createSprinkles(flexProperties);
