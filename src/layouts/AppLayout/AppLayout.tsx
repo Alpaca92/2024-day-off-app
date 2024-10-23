@@ -39,11 +39,13 @@ const items: NavigationBarProps['items'] = [
 
 const AppLayout = () => {
   return (
-    <main className={styles.container}>
+    <div className={styles.container}>
       {/* <Header /> */}
-      <Outlet />
+      <main className={styles.main}>
+        <Outlet />
+      </main>
       <NavigationBar items={items} />
-    </main>
+    </div>
   );
 };
 

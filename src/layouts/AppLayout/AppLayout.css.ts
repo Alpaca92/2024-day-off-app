@@ -9,3 +9,10 @@ export const container = style({
   gridTemplateRows: '14fr 1fr',
   backgroundColor: vars.colors.background.paper,
 });
+
+export const main = style({
+  width: '100%',
+  height: '100%',
+  display: 'flex',
+  alignItems: 'center',
+});
