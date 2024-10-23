@@ -1,11 +1,14 @@
 import { fontFace, globalStyle } from '@vanilla-extract/css';
 import { font } from '@styles/layers.css';
+import { fonts } from '@asset/index';
 
-const NoonnuBasicGothic = fontFace({
-  src: 'url("/assets/fonts/NoonnuBasicGothic.otf") format("opentype")',
-  fontWeight: 'normal',
-  fontStyle: 'normal',
-});
+const NoonnuBasicGothic = fontFace([
+  {
+    src: `local('NoonnuBasicGothic'), url(${fonts.NoonnuBasicGothic.otf}) format('opentype')`,
+    fontWeight: 'normal',
+    fontStyle: 'normal',
+  },
+]);
 
 globalStyle(':root', {
   '@layer': {
