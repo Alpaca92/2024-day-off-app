@@ -2,7 +2,7 @@ import { Button, Input } from '@components/index';
 import * as styles from './ChangePasswordModal.css';
 import useModal from '@hooks/useModal';
 import { sprinkles } from '@styles/sprinkles.css';
-import { FormProvider, useForm } from 'react-hook-form';
+import { FormProvider, SubmitHandler, useForm } from 'react-hook-form';
 import clsx from 'clsx';
 import { MODAL_KEYS } from 'src/constants';
 
@@ -17,6 +17,10 @@ const ChangePasswordModal = () => {
   const formInstance = useForm<ChangePasswordForm>();
   const { handleSubmit } = formInstance;
 
+  const onPasswordChange: SubmitHandler<ChangePasswordForm> = (data) => {
+    console.log(data);
+  };
+
   return (
     <div>
       <h1 className={styles.title}>비밀번호 변경</h1>
@@ -29,7 +33,7 @@ const ChangePasswordModal = () => {
           }),
           styles.formBox,
         )}
-        onSubmit={handleSubmit(() => {})}
+        onSubmit={handleSubmit(onPasswordChange)}
       >
         <FormProvider {...formInstance}>
           <Input<ChangePasswordForm> label="기존 비밀번호" name="password" />
