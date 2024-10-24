@@ -29,7 +29,7 @@ const ModalProvider = ({ children }: PropsWithChildren) => {
       closeModal,
     }),
     // eslint-disable-next-line react-hooks/exhaustive-deps
-    [],
+    [modalStack],
   );
 
   return (
