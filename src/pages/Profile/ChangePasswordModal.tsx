@@ -1,4 +1,4 @@
-import { Button, Input } from '@components/index';
+import { Button, Input, Modal } from '@components/index';
 import * as styles from './ChangePasswordModal.css';
 import useModal from '@hooks/useModal';
 import { sprinkles } from '@styles/sprinkles.css';
@@ -22,8 +22,7 @@ const ChangePasswordModal = () => {
   };
 
   return (
-    <div>
-      <h1 className={styles.title}>비밀번호 변경</h1>
+    <Modal title="비밀번호 찾기">
       <form
         className={clsx(
           sprinkles({
@@ -36,9 +35,9 @@ const ChangePasswordModal = () => {
         onSubmit={handleSubmit(onPasswordChange)}
       >
         <FormProvider {...formInstance}>
-          <Input<ChangePasswordForm> label="기존 비밀번호" name="password" />
-          <Input<ChangePasswordForm> label="새 비밀번호" name="newPassword" />
-          <Input<ChangePasswordForm> label="비밀번호 확인" name="confirmPassword" />
+          <Input<ChangePasswordForm> type="password" label="기존 비밀번호" name="password" />
+          <Input<ChangePasswordForm> type="password" label="새 비밀번호" name="newPassword" />
+          <Input<ChangePasswordForm> type="password" label="비밀번호 확인" name="confirmPassword" />
         </FormProvider>
         <div
           className={clsx(
@@ -57,7 +56,7 @@ const ChangePasswordModal = () => {
           </Button>
         </div>
       </form>
-    </div>
+    </Modal>
   );
 };
 
