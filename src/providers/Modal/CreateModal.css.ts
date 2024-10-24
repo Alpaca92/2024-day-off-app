@@ -9,6 +9,7 @@ export const container = style({
 export const modal = style({
   width: 'min(300px, 80%)',
   backgroundColor: vars.colors.background.default,
+  color: vars.colors.text.primary,
   borderRadius: vars.borderRadius.default,
   padding: `${vars.spaces.medium} ${vars.spaces.large}`,
 });
