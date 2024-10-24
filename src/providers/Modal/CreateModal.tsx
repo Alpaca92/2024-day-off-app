@@ -1,5 +1,5 @@
 import useModal from '@hooks/useModal';
-import { ReactElement } from 'react';
+import { MouseEvent, ReactElement } from 'react';
 import { createPortal } from 'react-dom';
 import * as styles from './CreateModal.css';
 import clsx from 'clsx';
@@ -24,9 +24,15 @@ const CreateModal = ({ children }: CreateModalProps) => {
       closeModal(key);
     };
 
+    const onInsideClick = (event: MouseEvent) => {
+      event.stopPropagation();
+    };
+
     return createPortal(
       <div onClick={onOutsideClick} className={clsx(absolute({ type: 'leftTop', fullSize: true }), styles.container)}>
-        <div className={clsx(absolute({ type: 'center' }), styles.modal)}>{children}</div>
+        <div className={clsx(absolute({ type: 'center' }), styles.modal)} onClick={onInsideClick}>
+          {children}
+        </div>
       </div>,
       node,
       key,
