@@ -20,6 +20,7 @@ export const vars = createGlobalThemeContract(
       background: {
         default: null,
         paper: null,
+        modal: null,
       },
       text: {
         primary: null,
@@ -130,6 +131,7 @@ createGlobalTheme(
         background: {
           default: '#f0f2f5',
           paper: '#ffffff',
+          modal: 'rgba(128, 128, 128, 0.65)',
         },
         text: {
           primary: '#1c1e21',
@@ -210,6 +212,7 @@ createGlobalTheme(
         background: {
           default: '#18191A',
           paper: '#242526',
+          modal: 'rgba(128, 128, 128, 0.65)',
         },
         text: {
           primary: '#E4E6EB',

@@ -1,8 +1,11 @@
 import useModal from '@hooks/useModal';
-import { ComponentPropsWithoutRef, ReactElement } from 'react';
+import { ReactElement } from 'react';
 import { createPortal } from 'react-dom';
+import * as styles from './CreateModal.css';
+import clsx from 'clsx';
+import { absolute } from '@styles/Recipes/absolute.css';
 
-interface CreateModalProps extends ComponentPropsWithoutRef<'div'> {
+interface CreateModalProps {
   children: ReactElement;
 }
 
@@ -21,10 +24,12 @@ const CreateModal = ({ children }: CreateModalProps) => {
       closeModal(key);
     };
 
-    return (
-      <div onClick={onOutsideClick}>
-        <div>{createPortal(children, node, key)}</div>
-      </div>
+    return createPortal(
+      <div onClick={onOutsideClick} className={clsx(absolute({ type: 'leftTop', fullSize: true }), styles.container)}>
+        <div className={clsx(absolute({ type: 'center' }), styles.modal)}>{children}</div>
+      </div>,
+      node,
+      key,
     );
   } catch (error) {
     console.log(error);
