@@ -6,6 +6,9 @@ import { Button } from '@components/index';
 import { sprinkles } from '@styles/sprinkles.css';
 import clsx from 'clsx';
 import { useNavigate } from 'react-router';
+import useModal from '@hooks/useModal';
+import ChangePasswordModal from '@pages/Profile/ChangePasswordModal';
+import { MODAL_KEYS } from 'src/constants';
 
 const ICON_SIZE = 20;
 const flexCenterGapSmall = sprinkles({
@@ -17,6 +20,7 @@ const flexCenterGapSmall = sprinkles({
 const Profile = () => {
   const navigate = useNavigate();
   const { isDarkMode, toggleTheme } = useTheme();
+  const { showModal } = useModal();
   const [user] = useState({
     name: '홍길동',
     email: 'hong@example.com',
@@ -30,8 +34,7 @@ const Profile = () => {
   };
 
   const onPasswordChange = () => {
-    // TODO: 비밀번호 변경 로직 구현
-    console.log('비밀번호 변경');
+    showModal(<ChangePasswordModal key={MODAL_KEYS.CHANGE_PASSWORD} />);
   };
 
   return (
