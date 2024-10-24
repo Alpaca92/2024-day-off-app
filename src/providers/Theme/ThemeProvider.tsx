@@ -1,4 +1,4 @@
-import { createContext, PropsWithChildren, useMemo, useState } from 'react';
+import { createContext, PropsWithChildren, useEffect, useMemo, useState } from 'react';
 
 interface ThemeContextProps {
   isDarkMode: boolean;
@@ -25,6 +25,10 @@ const ThemeProvider = ({ children }: PropsWithChildren) => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
     [isDarkMode],
   );
+
+  useEffect(() => {
+    document.body.setAttribute('data-theme', isDarkMode ? 'dark' : 'light');
+  }, [isDarkMode]);
 
   return <ThemeContext.Provider value={value}>{children}</ThemeContext.Provider>;
 };

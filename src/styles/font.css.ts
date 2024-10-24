@@ -10,7 +10,7 @@ const NoonnuBasicGothic = fontFace([
   },
 ]);
 
-globalStyle(':root', {
+globalStyle('body', {
   '@layer': {
     [font]: {
       fontFamily: NoonnuBasicGothic,
