@@ -7,7 +7,6 @@ interface ButtonProps extends ComponentPropsWithoutRef<'button'> {}
 
 const Button = ({ variant, fontSize, children, className, onClick, ...rest }: ButtonProps & ButtonRecipeProps) => {
   const _onClick = (event: MouseEvent<HTMLButtonElement>) => {
-    event.preventDefault();
     onClick?.(event);
   };
 

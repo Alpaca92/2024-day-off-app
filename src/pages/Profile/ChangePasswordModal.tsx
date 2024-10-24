@@ -5,6 +5,7 @@ import { sprinkles } from '@styles/sprinkles.css';
 import { FormProvider, SubmitHandler, useForm } from 'react-hook-form';
 import clsx from 'clsx';
 import { MODAL_KEYS } from 'src/constants';
+import { MouseEvent } from 'react';
 
 interface ChangePasswordForm {
   password: string;
@@ -19,6 +20,11 @@ const ChangePasswordModal = () => {
 
   const onPasswordChange: SubmitHandler<ChangePasswordForm> = (data) => {
     console.log(data);
+  };
+
+  const onCancelClick = (event: MouseEvent<HTMLButtonElement>) => {
+    event.preventDefault();
+    closeModal(MODAL_KEYS.CHANGE_PASSWORD);
   };
 
   return (
@@ -51,12 +57,7 @@ const ChangePasswordModal = () => {
           <Button fontSize="small" className={styles.button}>
             확인
           </Button>
-          <Button
-            fontSize="small"
-            variant="white"
-            className={styles.button}
-            onClick={() => closeModal(MODAL_KEYS.CHANGE_PASSWORD)}
-          >
+          <Button fontSize="small" variant="white" className={styles.button} onClick={onCancelClick}>
             취소
           </Button>
         </div>
