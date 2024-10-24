@@ -1,8 +1,7 @@
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import Router from '@routes/router';
 import '@styles/global.css';
-import ThemeProvider from '@providers/ThemeProvider';
-import ModalProvider from '@providers/Modal/ModalProvider';
+import { ModalProvider, ThemeProvider } from '@providers/index';
 
 const router = createBrowserRouter(Router);
 
