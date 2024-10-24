@@ -34,6 +34,14 @@ const variants = {
         backgroundColor: vars.colors.error.main,
       },
     },
+    white: {
+      backgroundColor: '#ffffff',
+      color: vars.colors.text.primary,
+      border: '1px solid #bababa',
+      ':hover': {
+        backgroundColor: '#eeeeee',
+      },
+    },
   },
   fontSize: {
     small: { fontSize: vars.fontSizes.small },

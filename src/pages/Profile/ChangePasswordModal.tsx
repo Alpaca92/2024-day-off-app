@@ -51,7 +51,12 @@ const ChangePasswordModal = () => {
           <Button fontSize="small" className={styles.button}>
             확인
           </Button>
-          <Button fontSize="small" className={styles.button} onClick={() => closeModal(MODAL_KEYS.CHANGE_PASSWORD)}>
+          <Button
+            fontSize="small"
+            variant="white"
+            className={styles.button}
+            onClick={() => closeModal(MODAL_KEYS.CHANGE_PASSWORD)}
+          >
             취소
           </Button>
         </div>
