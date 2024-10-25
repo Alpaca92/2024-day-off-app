@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import type { Preview } from '@storybook/react';
-import { darkTheme, lightTheme } from '@styles/theme.css';
+import { ThemeProvider, ModalProvider } from '@providers/index';
+import '@styles/global.css';
 
 const preview: Preview = {
   globalTypes: {
@@ -32,10 +33,16 @@ export const decorators = [
   (Story, context) => {
     const { theme } = context.globals;
 
+    useEffect(() => {
+      document.body.setAttribute('data-theme', theme ? 'dark' : 'light');
+    }, [theme]);
+
     return (
-      <div className={`${theme ? darkTheme : lightTheme}`}>
-        <Story />
-      </div>
+      <ThemeProvider>
+        <ModalProvider>
+          <Story />
+        </ModalProvider>
+      </ThemeProvider>
     );
   },
 ];
