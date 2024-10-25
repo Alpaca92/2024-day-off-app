@@ -1,4 +1,4 @@
-import type { Meta, StoryObj } from '@storybook/react';
+import type { Meta, StoryFn } from '@storybook/react';
 import NavigationBar from '@components/NavigationBar/NavigationBar';
 import { NAVIGATION_BAR_ITEMS } from 'src/constants';
 
@@ -12,10 +12,11 @@ const meta = {
 } satisfies Meta<typeof NavigationBar>;
 
 export default meta;
-type Story = StoryObj<typeof meta>;
 
-export const Plain: Story = {
-  args: {
-    items: NAVIGATION_BAR_ITEMS,
-  },
+export const Plain: StoryFn = () => {
+  return (
+    <div style={{ width: '500px' }}>
+      <NavigationBar items={NAVIGATION_BAR_ITEMS} />
+    </div>
+  );
 };
