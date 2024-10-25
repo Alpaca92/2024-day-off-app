@@ -17,6 +17,10 @@ export const item = style({
   cursor: 'pointer',
 });
 
+export const active = style({
+  color: vars.colors.warning.main,
+});
+
 export const title = style({
   fontSize: vars.fontSizes.small,
 });
