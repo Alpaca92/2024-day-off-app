@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import type { Preview } from '@storybook/react';
 import { ThemeProvider, ModalProvider } from '@providers/index';
 import '@styles/global.css';
+import { withRouter } from 'storybook-addon-remix-react-router';
 
 const preview: Preview = {
   globalTypes: {
@@ -30,6 +31,7 @@ const preview: Preview = {
 };
 
 export const decorators = [
+  withRouter,
   (Story, context) => {
     const { theme } = context.globals;
 
