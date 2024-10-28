@@ -1,7 +1,9 @@
 import { FormProvider, useForm } from 'react-hook-form';
-import * as styles from './Signup.css';
 import { useNavigate } from 'react-router';
+
 import { Button, Input } from '@components/index';
+
+import * as styles from './Signup.css';
 
 interface SignupForm {
   email: string;

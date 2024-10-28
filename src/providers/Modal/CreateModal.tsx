@@ -1,9 +1,12 @@
-import useModal from '@hooks/useModal';
 import { MouseEvent, ReactElement } from 'react';
 import { createPortal } from 'react-dom';
-import * as styles from './CreateModal.css';
-import clsx from 'clsx';
+
+import useModal from '@hooks/useModal';
 import { absolute } from '@styles/Recipes/absolute.css';
+
+import clsx from 'clsx';
+
+import * as styles from './CreateModal.css';
 
 interface CreateModalProps {
   children: ReactElement;

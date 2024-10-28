@@ -1,6 +1,8 @@
-import type { Meta, StoryObj } from '@storybook/react';
 import { Button } from '@components/index';
+
 import type { ButtonRecipeProps } from './Button.css';
+
+import type { Meta, StoryObj } from '@storybook/react';
 
 type variantKeys = NonNullable<ButtonRecipeProps['variant']>;
 type sizeKeys = NonNullable<ButtonRecipeProps['fontSize']>;

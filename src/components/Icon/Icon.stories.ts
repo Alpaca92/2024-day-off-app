@@ -1,7 +1,9 @@
-import type { Meta, StoryObj } from '@storybook/react';
 import { Icon } from '@components/index';
-import type { IconType } from '@components/Icon/Icon';
+
 import type { IconRecipeProps } from './Icon.css';
+
+import type { IconType } from '@components/Icon/Icon';
+import type { Meta, StoryObj } from '@storybook/react';
 
 type SizeKeys = NonNullable<IconRecipeProps['size']>;
 

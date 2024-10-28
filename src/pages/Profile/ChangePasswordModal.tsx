@@ -1,11 +1,15 @@
+import { MouseEvent } from 'react';
+import { FormProvider, SubmitHandler, useForm } from 'react-hook-form';
+
 import { Button, Input, Modal } from '@components/index';
-import * as styles from './ChangePasswordModal.css';
 import useModal from '@hooks/useModal';
 import { sprinkles } from '@styles/sprinkles.css';
-import { FormProvider, SubmitHandler, useForm } from 'react-hook-form';
-import clsx from 'clsx';
 import { MODAL_KEYS } from 'src/constants';
-import { MouseEvent } from 'react';
+
+import clsx from 'clsx';
+
+import * as styles from './ChangePasswordModal.css';
+
 
 interface ChangePasswordForm {
   password: string;

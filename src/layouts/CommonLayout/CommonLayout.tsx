@@ -1,4 +1,5 @@
 import { Outlet } from 'react-router';
+
 import * as styles from './CommonLayout.css';
 
 const CommmonLayout = () => {

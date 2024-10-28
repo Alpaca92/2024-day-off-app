@@ -1,5 +1,6 @@
-import CreateModal from '@providers/Modal/CreateModal';
 import { createContext, PropsWithChildren, ReactElement, useMemo, useState } from 'react';
+
+import CreateModal from '@providers/Modal/CreateModal';
 
 interface ModalContextProps {
   showModal: (component: ReactElement) => void;

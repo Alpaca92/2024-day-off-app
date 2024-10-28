@@ -1,6 +1,8 @@
 import { ComponentPropsWithoutRef } from 'react';
-import { icon, IconRecipeProps } from './Icon.css';
+
 import icons from '@asset/images/icons.svg';
+
+import { icon, IconRecipeProps } from './Icon.css';
 
 export type IconType = 'home' | 'management' | 'profile' | 'request' | 'setting';
 

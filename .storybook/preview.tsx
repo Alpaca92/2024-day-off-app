@@ -1,5 +1,7 @@
 import React, { useEffect } from 'react';
+
 import type { Preview } from '@storybook/react';
+
 import { ThemeProvider, ModalProvider } from '@providers/index';
 import '@styles/global.css';
 import { withRouter } from 'storybook-addon-remix-react-router';

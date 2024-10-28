@@ -1,14 +1,17 @@
 import { useState } from 'react';
-import { Sun, Moon, LogOut, Key } from 'lucide-react';
-import * as styles from './Profile.css';
-import useTheme from '@hooks/useTheme';
-import { Button } from '@components/index';
-import { sprinkles } from '@styles/sprinkles.css';
-import clsx from 'clsx';
 import { useNavigate } from 'react-router';
+
+import { Button } from '@components/index';
 import useModal from '@hooks/useModal';
+import useTheme from '@hooks/useTheme';
 import ChangePasswordModal from '@pages/Profile/ChangePasswordModal';
+import { sprinkles } from '@styles/sprinkles.css';
+import { Sun, Moon, LogOut, Key } from 'lucide-react';
 import { MODAL_KEYS } from 'src/constants';
+
+import clsx from 'clsx';
+
+import * as styles from './Profile.css';
 
 const ICON_SIZE = 20;
 const flexCenterGapSmall = sprinkles({

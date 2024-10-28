@@ -1,4 +1,5 @@
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+
 import Router from '@routes/router';
 import '@styles/global.css';
 import { ModalProvider, ThemeProvider } from '@providers/index';

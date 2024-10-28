@@ -1,6 +1,6 @@
-import { fontFace, globalStyle } from '@vanilla-extract/css';
-import { font } from '@styles/layers.css';
 import { fonts } from '@asset/index';
+import { font } from '@styles/layers.css';
+import { fontFace, globalStyle } from '@vanilla-extract/css';
 
 const NoonnuBasicGothic = fontFace([
   {

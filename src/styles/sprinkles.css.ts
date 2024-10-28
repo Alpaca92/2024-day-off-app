@@ -1,4 +1,5 @@
 import { createSprinkles, defineProperties } from '@vanilla-extract/sprinkles';
+
 import { vars } from './theme.css';
 
 const flexProperties = defineProperties({

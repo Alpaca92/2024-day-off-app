@@ -1,8 +1,11 @@
-import type { Meta, StoryFn } from '@storybook/react';
+import { useLocation } from 'react-router';
+
 import NavigationBar from '@components/NavigationBar/NavigationBar';
 import { NAVIGATION_BAR_ITEMS } from 'src/constants';
 import { reactRouterParameters } from 'storybook-addon-remix-react-router';
-import { useLocation } from 'react-router';
+
+import type { Meta, StoryFn } from '@storybook/react';
+
 
 const meta = {
   title: 'NavigationBar',
