@@ -1,35 +1,29 @@
-import { Icons } from '@asset/index';
 import { NavigationBarProps } from '@components/NavigationBar/NavigationBar';
 
 const NAVIGATION_BAR_ITEMS: NavigationBarProps['items'] = [
   {
-    src: Icons.Home,
-    alt: 'Home icon',
+    type: 'home',
     title: 'Home',
     path: '/',
   },
   {
-    src: Icons.Management,
-    alt: 'Management icon',
-    title: 'Management',
+    type: 'management',
+    title: 'management',
     path: 'management',
   },
   {
-    src: Icons.Request,
-    alt: 'request icon',
+    type: 'request',
     title: 'request',
     path: 'request',
   },
   {
-    src: Icons.Profile,
-    alt: 'profile icon',
+    type: 'profile',
     title: 'profile',
     path: 'profile',
   },
   {
-    src: Icons.Setting,
-    alt: 'Setting icon',
-    title: 'Setting',
+    type: 'setting',
+    title: 'setting',
     path: 'setting',
   },
 ];

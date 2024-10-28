@@ -1,21 +1,18 @@
 import { ComponentPropsWithoutRef } from 'react';
-import { backgroundImageVar, icon, IconRecipeProps } from './Icon.css';
-import { assignInlineVars } from '@vanilla-extract/dynamic';
+import { icon, IconRecipeProps } from './Icon.css';
+import icons from '@asset/images/icons.svg';
 
-// eslint-disable-next-line @typescript-eslint/no-empty-object-type
-export interface IconProps extends ComponentPropsWithoutRef<'img'> {}
+export type IconType = 'home' | 'management' | 'profile' | 'request' | 'setting';
 
-const Icon = ({ src, alt, size }: IconProps & IconRecipeProps) => {
-  console.log(src);
+export interface IconProps extends ComponentPropsWithoutRef<'svg'> {
+  type: IconType;
+}
 
+const Icon = ({ type, size }: IconProps & IconRecipeProps) => {
   return (
-    <img
-      alt={alt}
-      style={assignInlineVars({
-        [backgroundImageVar]: `url(${src})`,
-      })}
-      className={icon({ size })}
-    />
+    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" className={icon({ size })}>
+      <use href={`${icons}#${type}`} />
+    </svg>
   );
 };
 

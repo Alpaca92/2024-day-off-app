@@ -7,10 +7,6 @@ export const backgroundImageVar = createVar();
 const base = style({
   cursor: 'pointer',
   aspectRatio: '1',
-  backgroundImage: backgroundImageVar,
-  backgroundSize: 'cover',
-  backgroundPosition: 'center',
-  backgroundRepeat: 'no-repeat',
 });
 
 const variants = {

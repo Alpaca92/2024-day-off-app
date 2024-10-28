@@ -19,14 +19,14 @@ const NavigationBar = ({ items }: NavigationBarProps) => {
 
   return (
     <nav className={styles.container}>
-      {items.map(({ src, alt, title, path }, index) => (
+      {items.map(({ type, title, path }, index) => (
         <Link
           key={index}
           to={path}
           onClick={() => setCurrentIndex(index)}
           className={clsx(currentIndex === index && styles.active, styles.item)}
         >
-          <Icon src={src} alt={alt} />
+          <Icon type={type} />
           <p className={styles.title}>{title}</p>
         </Link>
       ))}

@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import { Icon } from '@components/index';
-import { Icons } from '@asset/index';
+import type { IconType } from '@components/Icon/Icon';
 import type { IconRecipeProps } from './Icon.css';
 
 type SizeKeys = NonNullable<IconRecipeProps['size']>;
@@ -14,6 +14,16 @@ const meta = {
   tags: ['autodocs'],
   args: {},
   argTypes: {
+    type: {
+      control: {
+        type: 'select',
+      },
+      options: ['home', 'management', 'profile', 'request', 'setting'] as IconType[],
+      description: '아이콘의 종류를 결정',
+      table: {
+        type: { summary: 'IconType' },
+      },
+    },
     size: {
       control: {
         type: 'radio',
@@ -25,24 +35,6 @@ const meta = {
         type: { summary: 'string' },
       },
     },
-    src: {
-      control: {
-        type: 'file',
-      },
-      description: '아이콘 이미지의 경로',
-      table: {
-        type: { summary: 'string' },
-      },
-    },
-    alt: {
-      control: {
-        type: 'text',
-      },
-      description: '아이콘의 대체 텍스트',
-      table: {
-        type: { summary: 'string' },
-      },
-    },
   },
 } satisfies Meta<typeof Icon>;
 
@@ -51,8 +43,7 @@ type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
   args: {
-    src: Icons.Home,
-    alt: 'Home icon',
+    type: 'home',
     size: 'medium',
   },
 };
