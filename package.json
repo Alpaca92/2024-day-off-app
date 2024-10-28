@@ -15,6 +15,7 @@
     "bsb": "npm run build-storybook"
   },
   "dependencies": {
+    "@hookform/resolvers": "^3.9.0",
     "@vanilla-extract/css": "^1.15.5",
     "@vanilla-extract/dynamic": "^2.1.2",
     "@vanilla-extract/recipes": "^0.5.5",
@@ -26,7 +27,8 @@
     "react-dom": "^18.3.1",
     "react-hook-form": "^7.53.0",
     "react-router": "^6.26.2",
-    "react-router-dom": "^6.26.2"
+    "react-router-dom": "^6.26.2",
+    "zod": "^3.23.8"
   },
   "devDependencies": {
     "@chromatic-com/storybook": "^1.9.0",
