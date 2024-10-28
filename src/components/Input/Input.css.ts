@@ -20,3 +20,8 @@ export const input = style({
   border: `1px solid ${vars.colors.border.default}`,
   fontSize: vars.fontSizes.medium,
 });
+
+export const errorMessage = style({
+  fontSize: vars.fontSizes.small,
+  color: vars.colors.error.main,
+});

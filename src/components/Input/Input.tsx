@@ -11,13 +11,19 @@ interface InputProps<T extends FieldValues> extends ComponentPropsWithoutRef<'in
 
 const Input = <T extends FieldValues>({ label, id, name, options, ...rest }: InputProps<T>) => {
   const inputId = useId();
-  const { register } = useFormContext();
+  const {
+    register,
+    formState: { errors },
+  } = useFormContext();
 
   return (
-    <label htmlFor={id ?? inputId} className={styles.container}>
-      {label && <p className={styles.label}>{label}</p>}
-      <input {...rest} className={styles.input} id={id ?? inputId} {...register(name, options)} />
-    </label>
+    <>
+      <label htmlFor={id ?? inputId} className={styles.container}>
+        {label && <p className={styles.label}>{label}</p>}
+        <input {...rest} className={styles.input} id={id ?? inputId} {...register(name, options)} />
+      </label>
+      {errors[name] && <div className={styles.errorMessage}>{errors[name]?.message?.toString()}</div>}
+    </>
   );
 };
 
