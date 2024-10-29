@@ -1,5 +1,5 @@
-import { ComponentPropsWithoutRef, useState } from 'react';
-import { Link } from 'react-router-dom';
+import { ComponentPropsWithoutRef, useEffect, useState } from 'react';
+import { Link, useLocation } from 'react-router-dom';
 
 import Icon from '@components/Icon/Icon';
 import { IconProps } from '@components/Icon/Icon';
@@ -7,8 +7,6 @@ import { IconProps } from '@components/Icon/Icon';
 import clsx from 'clsx';
 
 import * as styles from './NavigationBar.css';
-
-
 
 interface Item extends IconProps {
   title: string;
@@ -21,6 +19,14 @@ export interface NavigationBarProps extends ComponentPropsWithoutRef<'nav'> {
 
 const NavigationBar = ({ items }: NavigationBarProps) => {
   const [currentIndex, setCurrentIndex] = useState<number>(0);
+  const location = useLocation();
+
+  useEffect(() => {
+    const index = items.findIndex((item) => item.path === location.pathname);
+    setCurrentIndex(index);
+
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   return (
     <nav className={styles.container}>

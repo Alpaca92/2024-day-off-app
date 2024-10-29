@@ -9,21 +9,21 @@ export const NAVIGATION_BAR_ITEMS: NavigationBarProps['items'] = [
   {
     type: 'management',
     title: 'management',
-    path: 'management',
+    path: '/management',
   },
   {
     type: 'request',
     title: 'request',
-    path: 'request',
+    path: '/request',
   },
   {
     type: 'profile',
     title: 'profile',
-    path: 'profile',
+    path: '/profile',
   },
   {
     type: 'setting',
     title: 'setting',
-    path: 'setting',
+    path: '/setting',
   },
 ];
