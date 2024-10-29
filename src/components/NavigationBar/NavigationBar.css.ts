@@ -3,8 +3,8 @@ import { style } from '@vanilla-extract/css';
 
 export const container = style({
   width: '100%',
-  display: 'flex',
-  justifyContent: 'space-evenly',
+  display: 'grid',
+  gridTemplateColumns: 'repeat(5, 1fr)',
   alignItems: 'center',
   borderTop: `1px solid ${vars.colors.border.default}`,
 });
