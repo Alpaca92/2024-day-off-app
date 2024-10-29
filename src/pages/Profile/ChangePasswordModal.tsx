@@ -2,24 +2,27 @@ import { MouseEvent } from 'react';
 import { FormProvider, SubmitHandler, useForm } from 'react-hook-form';
 
 import { Button, Input, Modal } from '@components/index';
+import { MODAL_KEYS, passwordSchema } from '@constants/index';
+import { zodResolver } from '@hookform/resolvers/zod';
 import useModal from '@hooks/useModal';
 import { sprinkles } from '@styles/sprinkles.css';
-import { MODAL_KEYS } from 'src/constants';
+import { z } from 'zod';
 
 import clsx from 'clsx';
 
 import * as styles from './ChangePasswordModal.css';
 
+const schema = z.object({
+  password: passwordSchema,
+  newPassword: passwordSchema,
+  confirmPassword: passwordSchema,
+});
 
-interface ChangePasswordForm {
-  password: string;
-  newPassword: string;
-  confirmPassword: string;
-}
+type ChangePasswordForm = z.infer<typeof schema>;
 
 const ChangePasswordModal = () => {
   const { closeModal } = useModal();
-  const formInstance = useForm<ChangePasswordForm>();
+  const formInstance = useForm<ChangePasswordForm>({ mode: 'onSubmit', resolver: zodResolver(schema) });
   const { handleSubmit } = formInstance;
 
   const onPasswordChange: SubmitHandler<ChangePasswordForm> = (data) => {
