@@ -3,7 +3,7 @@ import { NavigationBarProps } from '@components/NavigationBar/NavigationBar';
 export const NAVIGATION_BAR_ITEMS: NavigationBarProps['items'] = [
   {
     type: 'home',
-    title: 'Home',
+    title: 'home',
     path: '/',
   },
   {

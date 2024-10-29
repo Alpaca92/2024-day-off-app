@@ -7,6 +7,7 @@ import CommmonLayout from '@layouts/CommonLayout/CommonLayout';
 const Login = lazy(() => import('@pages/Login/Login'));
 const Signup = lazy(() => import('@pages/Signup/Signup'));
 const Home = lazy(() => import('@pages/Home/Home'));
+const Request = lazy(() => import('@pages/Request/Request'));
 const Profile = lazy(() => import('@pages/Profile/Profile'));
 
 const Router: RouteObject[] = [
@@ -35,6 +36,10 @@ const Router: RouteObject[] = [
               {
                 path: '/',
                 element: <Home />,
+              },
+              {
+                path: '/request',
+                element: <Request />,
               },
               {
                 path: '/profile',
