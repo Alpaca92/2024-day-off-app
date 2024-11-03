@@ -26,27 +26,27 @@ const Router: RouteObject[] = [
             path: '/login',
             element: <Login />,
           },
-          {
-            path: '/signup',
-            element: <Signup />,
-          },
-          {
-            element: <AppLayout />,
-            children: [
-              {
-                path: '/',
-                element: <Home />,
-              },
-              {
-                path: '/request',
-                element: <Request />,
-              },
-              {
-                path: '/profile',
-                element: <Profile />,
-              },
-            ],
-          },
+          // {
+          //   path: '/signup',
+          //   element: <Signup />,
+          // },
+          // {
+          //   element: <AppLayout />,
+          //   children: [
+          //     {
+          //       path: '/',
+          //       element: <Home />,
+          //     },
+          //     {
+          //       path: '/request',
+          //       element: <Request />,
+          //     },
+          //     {
+          //       path: '/profile',
+          //       element: <Profile />,
+          //     },
+          //   ],
+          // },
         ],
       },
     ],
