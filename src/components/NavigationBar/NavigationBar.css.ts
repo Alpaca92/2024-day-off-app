@@ -1,4 +1,3 @@
-import { vars } from '@styles/theme.css';
 import { style } from '@vanilla-extract/css';
 
 export const container = style({
@@ -6,7 +5,6 @@ export const container = style({
   display: 'grid',
   gridTemplateColumns: 'repeat(5, 1fr)',
   alignItems: 'center',
-  borderTop: `1px solid ${vars.colors.border.default}`,
 });
 
 export const item = style({
@@ -17,10 +15,6 @@ export const item = style({
   cursor: 'pointer',
 });
 
-export const active = style({
-  color: vars.colors.warning.main,
-});
+export const active = style({});
 
-export const title = style({
-  fontSize: vars.fontSizes.small,
-});
+export const title = style({});

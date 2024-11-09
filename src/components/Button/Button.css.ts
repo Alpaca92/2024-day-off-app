@@ -14,29 +14,29 @@ const base = style({
 const variants = {
   variant: {
     primary: {
-      backgroundColor: vars.colors.button.primary.background,
-      color: vars.colors.button.primary.text,
+      backgroundColor: '',
+      color: '',
       ':hover': {
-        backgroundColor: vars.colors.button.primary.hover,
+        backgroundColor: '',
       },
     },
     secondary: {
-      backgroundColor: vars.colors.button.secondary.background,
-      color: vars.colors.button.secondary.text,
+      backgroundColor: '',
+      color: '',
       ':hover': {
-        backgroundColor: vars.colors.button.secondary.hover,
+        backgroundColor: '',
       },
     },
     danger: {
-      backgroundColor: vars.colors.error.light,
-      color: vars.colors.primary.contrastText,
+      backgroundColor: '',
+      color: '',
       ':hover': {
-        backgroundColor: vars.colors.error.main,
+        backgroundColor: '',
       },
     },
     white: {
       backgroundColor: '#ffffff',
-      color: vars.colors.text.primary,
+      color: '',
       border: '1px solid #bababa',
       ':hover': {
         backgroundColor: '#eeeeee',

@@ -1,14 +1,15 @@
 import { lazy, Suspense } from 'react';
 import { Outlet, RouteObject } from 'react-router';
 
-import AppLayout from '@layouts/AppLayout/AppLayout';
 import CommmonLayout from '@layouts/CommonLayout/CommonLayout';
+import AppLayout from '@layouts/AppLayout/AppLayout';
+import Login from '@pages/Login/Login.tsx';
 
-const Login = lazy(() => import('@pages/Login/Login'));
-const Signup = lazy(() => import('@pages/Signup/Signup'));
-const Home = lazy(() => import('@pages/Home/Home'));
-const Request = lazy(() => import('@pages/Request/Request'));
-const Profile = lazy(() => import('@pages/Profile/Profile'));
+// const Login = lazy(() => import('@pages/Login/Login'));
+// const Signup = lazy(() => import('@pages/Signup/Signup'));
+// const Home = lazy(() => import('@pages/Home/Home'));
+// const Request = lazy(() => import('@pages/Request/Request'));
+// const Profile = lazy(() => import('@pages/Profile/Profile'));
 
 const Router: RouteObject[] = [
   {
